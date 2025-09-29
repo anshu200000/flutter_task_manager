@@ -1,19 +1,22 @@
-# Hello World
+# High-Level Overview
+
+It’s a Flutter app where you can:
+
+#### Fetch tasks from an API (JSONPlaceholder fake API).
+#### Add tasks (locally + send to API).
+#### Delete tasks (locally + delete on API).
+#### Manage state using Provider (instead of messy setState).
 
 A new Flutter project created with FlutLab - https://flutlab.io
 
-## Getting Started
+## How the App Works Step by Step
 
-A few resources to get you started if this is your first Flutter project:
+App starts → TaskProvider is created → empty task list.
+User taps “Fetch Tasks” → API call → first 10 tasks from JSONPlaceholder loaded.
+User types a task & presses Add → task added locally + sent to API.
+User taps Delete → task removed from local state + API.
+UI automatically updates (because of Provider’s notifyListeners()).
 
-- https://flutter.dev/docs/get-started/codelab
-- https://flutter.dev/docs/cookbook
+## Summary
 
-For help getting started with Flutter, view our
-https://flutter.dev/docs, which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-## Getting Started: FlutLab - Flutter Online IDE
-
-- How to use FlutLab? Please, view our https://flutlab.io/docs
-- Join the discussion and conversation on https://flutlab.io/residents
+This code is a mini Task Manager app that demonstrates state management (Provider) + API integration in Flutter.
